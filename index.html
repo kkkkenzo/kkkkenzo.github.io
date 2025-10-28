@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel Kenzo Takagi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #f4f6f8;
+      --text-color: #1c1e21;
+      --subtext-color: #606770;
+      --card-color: #ffffff;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode {
+      --bg-color: #18191a;
+      --text-color: #f0f2f5;
+      --subtext-color: #b0b3b8;
+      --card-color: #242526;
+      --shadow-color: rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .top-buttons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .top-buttons button {
+      background-color: transparent;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      border-radius: 50px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .top-buttons button:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+    }
+
+    .card {
+      display: flex;
+      background-color: var(--card-color);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px var(--shadow-color);
+      overflow: hidden;
+      max-width: 900px;
+      width: 100%;
+      margin-top: 80px;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .right {
+      flex: 1;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+    }
+
+
+    .top-content {
+      
+    }
+
+    .inside-icons {
+      display: flex;
+      gap: 20px; /* espaço entre os ícones */
+      justify-content: center;
+      flex-wrap: wrap; /* permite quebrar linha se não couberem */
+    }
+
+    .right h2 {
+      margin: 0;
+      font-size: 24px;
+      color: var(--text-color);
+    }
+
+    .right p {
+      margin: 8px 0 0;
+      color: var(--subtext-color);
+    }
+
+    .bottom-icons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .icon-link {
+      text-decoration: none;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .icon-link:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      margin-bottom: 5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      filter: brightness(1.15);
+    }
+
+    .github { background-color: #24292e; }
+    .linkedin { background-color: #0077b5; }
+    .itch-io { background-color: #ff0000; }
+    .email { background-color: #ea4335; }
+    .whatsapp { background-color: #25D366; }
+    .curriculum { background-color: #E1306C; }
+
+    .icon-link span {
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+      }
+
+      .right {
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .bottom-icons {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-buttons">
+    <button onclick="toggleTheme()">🌓</button>
+    <button onclick="toggleLanguage()">🌐 PT | EN</button>
+  </div>
+  <div class="card">
+    <div class="left">
+      <img src="https://github.com/kkkkenzochan/kkkkenzochan.github.io/blob/main/1739152172589.jpg?raw=true" alt="Imagem de fundo">
+    </div>
+    <div class="right">
+  <div class="right-content">
+    <div class="top-content">
+      <h2 id="title">Daniel Kenzo Takagi</h2>
+      <p id="subtitle">Programador C#, Desenvolvedor Web</p>
+      <p id="about">Sou desenvolvedor web. Minhas principais stacks são ASP.NET, SQL, API Rest e programação C#</p>
+    </div>
+    <div class="inside-icons">
+      <a class="icon-link" href="https://drive.google.com/file/d/1El_JbZc8OD0u_s9FavLJo9g1deyp6rvt/view?usp=sharing" target="_blank">
+        <div class="icon curriculum"><i class="fab fa-regular fa-file"></i></div>
+        <span id="curriculum-label">CV PORTUGUESE</span>
+      </a>
+      <a class="icon-link" href="https://drive.google.com/file/d/1PPPB5r23lemEYhJJZMQGvh1bQVnpl_HB/view?usp=sharing" target="_blank">
+        <div class="icon curriculum"><i class="fab fa-regular fa-file"></i></div>
+        <span id="curriculum-label">CV ENGLISH</span>
+      </a>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="bottom-icons">
+    <a class="icon-link" href="https://github.com/kkkkenzo" target="_blank">
+      <div class="icon github"><i class="fab fa-github"></i></div>
+      <span id="github-label">GitHub</span>
+    </a>
+    <a class="icon-link" href="https://www.linkedin.com/in/daniel-kenzo-takagi-634090149/" target="_blank">
+      <div class="icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+      <span id="linkedin-label">LinkedIn</span>
+    </a>
+    <a class="icon-link" href="https://kkkkenzo.itch.io/" target="_blank">
+      <div class="icon itch-io"><i class="fab fa-itch-io"></i></div>
+      <span id="itch-label">Itch.io</span>
+    </a>
+    <a class="icon-link" href="mailto:danielkt.jobs@email.com">
+      <div class="icon email"><i class="fas fa-envelope"></i></div>
+      <span id="email-label">Email</span>
+    </a>
+    <a class="icon-link" href="https://wa.me/5518997772515" target="_blank">
+      <div class="icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+      <span id="whatsapp-label">WhatsApp</span>
+    </a>
+  </div>
+
+  <script>
+    let isDark = false;
+    let lang = 'pt';
+
+    function toggleTheme() {
+      isDark = !isDark;
+      document.body.classList.toggle("dark-mode", isDark);
+    }
+
+    function toggleLanguage() {
+      lang = lang === 'pt' ? 'en' : 'pt';
+      const texts = {
+        pt: {
+          title: "Daniel Kenzo Takagi",
+          subtitle: "Programador C#, Desenvolvedor Web",
+          about: "Sou desenvolvedor web. Minhas principais stacks são ASP.NET, SQL, API Rest e programação C#",
+          github: "GitHub",
+          linkedin: "LinkedIn",
+          itchio: "Itch.io",
+          email: "Email",
+          whatsapp: "WhatsApp",
+          curriculum: "CV"
+        },
+        en: {
+          title: "Daniel Kenzo Takagi",
+          subtitle: "C# Programmer, Web Developer",
+          about: "I'm a web developer, my main stacks are ASP.NET, SQL, API Rest and C# programming",
+          github: "GitHub",
+          linkedin: "LinkedIn",
+          itchio: "Itch.io",
+          email: "Email",
+          whatsapp: "WhatsApp",
+          curriculum: "CV"
+        }
+      };
+
+      const t = texts[lang];
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("about").innerText = t.about;
+      document.getElementById("subtitle").innerText = t.subtitle;
+      document.getElementById("github-label").innerText = t.github;
+      document.getElementById("linkedin-label").innerText = t.linkedin;
+      document.getElementById("itch-io-label").innerText = t.itchio;
+      document.getElementById("email-label").innerText = t.email;
+      document.getElementById("whatsapp-label").innerText = t.whatsapp;
+      document.getElementById("curriculum-label").innerText = t.curriculum;
+    }
+  </script>
+</body>
+</html>
+
